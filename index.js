@@ -1,10 +1,14 @@
 const express = require("express");
 const server = express();
 const resourceRoute = require("./routes_models/resource-routes");
+const projectRoute = require("./routes_models/project-routes")
+
 
 server.use(express.json());
 
 server.use("/api/resources", resourceRoute);
+server.use("/api/projects", projectRoute)
+
 
 const port = 2100;
 
